@@ -1,0 +1,59 @@
+/* Empty. Add your own CSS if you like */
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+}
+.spinner-calm {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+  top: 50%;
+}
+.dont-display-icon {
+  color: transparent;
+}
+.nfc-image {
+  width: 100%;
+  height: 100%;
+}
+.nfc-turn-on {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  padding: 10px 5px;
+  border: 1px solid #D8000C;
+  box-shadow: 6px 6px 14px #888888;
+}
+
+.nfc-error-icon{
+  float: left;
+}
+
+.scroll-content > .nfc-table {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.scroll > .nfc-center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.attractions-button {
+  width: 100px;
+  height: 100px;
+  margin: 5px
+}
+.attractions-on-click-attraction:active {
+  background: #11c1f3;
+}
+.nfc-center .row {
+  height: 100%;
+}
+.nfc-center .scroll {
+  height: 100%;
+}

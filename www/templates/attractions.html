@@ -1,0 +1,18 @@
+<ion-view view-title="Attractions" name="attractions-view" >
+
+  <!-- Hamburger Header Button (to open left menu on click from the header)-->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+  <div class="card" ng-click="attractions.onAttractionClick(attraction)" ng-repeat="attraction in  attractions.attractions | filter:attractions.search track by attraction.id">
+    <div class="item item-text-wrap attractions-on-click-attraction">
+    {{:: attraction.name}} | Total: {{:: attraction.total}}
+    </div>
+  </div>
+  </ion-content>
+</ion-view>
+
+<!-- Spiner -->
+<ion-spinner ng-if="attractions.showSpinner" icon="lines" class="spinner-calm"></ion-spinner>

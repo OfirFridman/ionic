@@ -1,0 +1,82 @@
+<ion-view view-title="Group" name="details-view">
+
+  <!-- Hamburger Header Button (to open left menu on click from the header)-->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+    <!-- Group Details  -->
+    <div class="list list-inset">
+
+      <!-- Group Name Input -->
+      <label class="item item-input">
+        <i class="icon ion-android-contacts placeholder-icon"></i>
+        <input type="text" placeholder="Group Name" ng-model="details.groupName">
+      </label>
+
+      <!-- Contact Name Input -->
+      <label class="item item-input">
+        <i class="icon ion-android-contact placeholder-icon"></i>
+        <input type="text" placeholder="Contact Name" ng-model="details.contactName">
+      </label>
+
+      <!-- Phone Input -->
+      <label class="item item-input">
+        <i class="icon ion-android-call placeholder-icon"></i>
+        <input type="tel" placeholder="Phone Number" ng-model="details.phoneNumber">
+      </label>
+
+      <!-- Phone Input -->
+      <label class="item item-input">
+        <i class="icon ion-person-stalker placeholder-icon"></i>
+        <input type="number" placeholder="Total Person Number" ng-model="details.totalPerosnNumber">
+      </label>
+
+      <!-- Hotel Names  -->
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Hotel Names
+        </div>
+        <select>
+          <option ng-repeat="hotel in details.hotels">{{:: hotel.value}}</option>
+        </select>
+      </label>
+
+      <!-- Room Number  -->
+      <label class="item item-input">
+        <i class="icon ion-ios-cloudy-night dont-display-icon placeholder-icon"></i>
+        <input type="number" placeholder="Room Number" ng-model="details.roomNumber">
+      </label>
+
+      <!-- Num Of Nights  -->
+      <label class="item item-input">
+        <i class="icon ion-ios-cloudy-night placeholder-icon"></i>
+        <input type="number" placeholder="Num of Nights" ng-model="details.numOfNights">
+      </label>
+
+      <!-- Age Range -->
+      <label class="item item-input">
+        <i class="icon ion-ios-cloudy-night dont-display-icon placeholder-icon"></i>
+        <input type="number" placeholder="Age Range" ng-model="details.ageRange">
+      </label>
+
+      <!-- Gender -->
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Gender
+        </div>
+        <select>
+          <option ng-repeat="gender in details.gender">{{:: gender.value}}</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Update Group  -->
+    <button class="button button-block button-calm" ng-click="details.updateDetails()">Update</button>
+  </ion-content>
+</ion-view>
+
+<!-- Spiner -->
+<ion-spinner ng-if="details.showSpinner" icon="lines" class="spinner-calm"></ion-spinner>

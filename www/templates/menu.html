@@ -1,0 +1,42 @@
+<ion-side-menus>
+
+  <!-- Main content -->
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <!-- Left Menu -->
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-positive">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+
+        <!-- Login  -->
+        <ion-item nav-clear menu-close href="#/app/login">
+          Login
+        </ion-item>
+
+        <!-- Attractions  -->
+        <ion-item nav-clear menu-close href="#/app/attractions">
+          Attractions
+        </ion-item>
+
+        <!-- Details  -->
+        <ion-item nav-clear menu-close href="#/app/details">
+          Details
+        </ion-item>
+
+        <!-- NFC -->
+        <ion-item nav-clear menu-close href="#/app/nfc">
+          NFC
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

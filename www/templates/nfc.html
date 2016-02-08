@@ -1,0 +1,23 @@
+<ion-view view-title="NFC" name="nfc-view"  class="nfc-center">
+
+  <!-- Hamburger Header Button (to open left menu on click from the header)-->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-android-refresh" ng-click="nfc.onRefreshClick()"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+      <div class="nfc-turn-on" ng-show="!nfc.nfcIsOn">
+        <i class="ion-close-circled nfc-error-icon"></i>
+        TURN NFC ON !!!
+      </div>
+    <div class="row row-center">
+      <div class="col col-center">
+        <img src="img\nfcLogo.jpg" alt="" class="nfc-image"/>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
